@@ -16,6 +16,8 @@ for key, cost in services.items():
 	if (auto_service == key):
 		print(f"Cost of {key.lower()}: {cost}")
 		break
+	else:
+		print("Error: Requested service is not recognized")
 
 
 
