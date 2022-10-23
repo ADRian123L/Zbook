@@ -8,7 +8,7 @@ services = {
     "Tire rotation" : 19,
     "Car wash" : 7,
     "Car wax" : 12,
-    "-" : 0
+    "-" : ""
 }
 
 # Outputs the services:
@@ -26,6 +26,7 @@ print()
 first_serv = input("Select first service:\n")
 second_serv = input("Select second service:\n")
 serv_1, serv_2 = first_serv, second_serv
+print()
 
 # Checks for '-' input:
 if (first_serv == "-"):
@@ -34,13 +35,18 @@ if (second_serv == "-"):
     serv_2 = "No service"
 
 # Outputs the selected services and their prices:
+print("Davy's auto shop invoice")
+print()
+content_1 = ((",$" + str(services[first_serv])) if (first_serv != "-") else "")
+content_2 = ((",$" + str(services[second_serv])) if (second_serv != "-") else "")
 if first_serv in services.keys():
-    print(f"Service 1: {serv_1}, ${services[first_serv]}")
-
+    print(f"Service 1: {serv_1} {content_1}")
 if second_serv in services.keys():
-    print(f"Service 2: {serv_2}, ${services[second_serv]}")
+    print(f"Service 2: {serv_2} {content_2}")
 
 # Prints the total cost:
-total = services[first_serv] + services[second_serv]
+print()
+total = (services[first_serv] if (first_serv != "-") else 0) \
+      + (services[second_serv] if (second_serv != "-") else 0)
 print(f"Total: ${total}")
 
