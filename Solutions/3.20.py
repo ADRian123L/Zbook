@@ -37,6 +37,7 @@ if (second_serv == "-"):
 # Outputs the selected services and their prices:
 print("Davy's auto shop invoice")
 print()
+# Checks whether to change the formatting:
 content_1 = ((", $" + str(services[first_serv])) if (first_serv != "-") else "")
 content_2 = ((", $" + str(services[second_serv])) if (second_serv != "-") else "")
 if first_serv in services.keys():
@@ -46,6 +47,7 @@ if second_serv in services.keys():
 
 # Prints the total cost:
 print()
+# Checks whether the values are not integers:
 total = (services[first_serv] if (first_serv != "-") else 0) \
       + (services[second_serv] if (second_serv != "-") else 0)
 print(f"Total: ${total}")
