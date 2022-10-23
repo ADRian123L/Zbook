@@ -10,6 +10,7 @@ services = {
 	"Tire rotation" : "$19",
 	"Car wash" : "$7"
 }
+print(f"You entered: {auto_service}")
 
 for key, cost in services.items():
 	if (auto_service == key):
