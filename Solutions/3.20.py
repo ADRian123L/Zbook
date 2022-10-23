@@ -37,12 +37,12 @@ if (second_serv == "-"):
 # Outputs the selected services and their prices:
 print("Davy's auto shop invoice")
 print()
-content_1 = ((",$" + str(services[first_serv])) if (first_serv != "-") else "")
-content_2 = ((",$" + str(services[second_serv])) if (second_serv != "-") else "")
+content_1 = ((", $" + str(services[first_serv])) if (first_serv != "-") else "")
+content_2 = ((", $" + str(services[second_serv])) if (second_serv != "-") else "")
 if first_serv in services.keys():
-    print(f"Service 1: {serv_1} {content_1}")
+    print(f"Service 1: {serv_1}{content_1}")
 if second_serv in services.keys():
-    print(f"Service 2: {serv_2} {content_2}")
+    print(f"Service 2: {serv_2}{content_2}")
 
 # Prints the total cost:
 print()
