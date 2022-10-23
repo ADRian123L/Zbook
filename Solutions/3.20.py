@@ -50,5 +50,5 @@ print()
 # Checks whether the values are not integers:
 total = (services[first_serv] if (first_serv != "-") else 0) \
       + (services[second_serv] if (second_serv != "-") else 0)
+# Outputs the result:
 print(f"Total: ${total}")
-
