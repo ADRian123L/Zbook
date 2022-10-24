@@ -15,4 +15,4 @@ def binary(input) -> int:
 
 # Calls and outputs the result:
 integer = int(input())
-print(binary(integer))    
+print(binary(integer))
