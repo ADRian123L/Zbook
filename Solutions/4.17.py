@@ -1,28 +1,33 @@
 # 4.17  Author: Adrian & June
 
-def solver(coef) -> str:
-    # SOLVING FOR Y:
-    # Makes both Xs equal:
-    if (coef[0] != coef[3]):
-        mult = (coef[3] / coef[0])
-        new_x1 = (coef[0] * mult)
-        new_y1 = (coef[1] * mult)
-        new_c = (coef[2] * mult)
-    # Multiplies all other firsts coefficients by -1:
-    new_y1 *= -1
-    new_c *= -1
+# The program promps for six leading coefficients.
+# Afterwards, the program outputs the x and y values needed to solve the 
+# linear equation.
+
+# The function solves for the x and y values:
+def linear(coef) -> str:
+    # Sets the x and y values to non-existent:
+    xvalue = None
+    yvalue = None
+    for x in range(-10, 11):
+        for y in range(-10, 11):
+            if ((x * (coef[0] - coef[3])) + (y * (coef[1] - coef[4]))) == (coef[2] - coef[5]):
+                yvalue = int(y)
+                xvalue = int(x)
+                break
     
-    # Adds both equations:
-    constant = (new_c + coef[5])
-    yvalue = (new_y1 + coef[4])
+    if ((xvalue * coef[0] + yvalue * coef[1]) == coef[2]):
+        pass
+    else:
+        xvalue = int(((coef[2] - yvalue * coef[1]) / coef[0]))
+    if ((xvalue * coef[0] + yvalue * coef[1]) != coef[2]):
+        xvalue = None
 
-    # Getting y:
-    y = (constant / yvalue)
-
-    # SOLVING FOR X:
-    x = ((coef[2] - (coef[1] * y)) / coef[0])
-
-    return f"x = {int(x)}, y = {int(y)}"
+    if (xvalue == None) or (yvalue == None):
+        result = "There is no solution"
+    else:
+        result = f"x = {xvalue} , y = {yvalue}"
+    return result
 
 
 # Promps and stores the coefficients:
@@ -31,4 +36,4 @@ for i in range(6):
     integer = int(input())
     num_list.append(integer)
 
-print(solver(num_list))
+print(linear(num_list))
