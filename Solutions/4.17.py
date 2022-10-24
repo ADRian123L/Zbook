@@ -32,12 +32,11 @@ def linear(coef) -> str:
         result = f"x = {xvalue} , y = {yvalue}"
     return result
 
-
 # Promps and stores the coefficients:
 num_list = []
 for i in range(6):
     integer = int(input())
     num_list.append(integer)
 
-# Calls and outputs the results:
+# Calls the function and outputs what it returns:
 print(linear(num_list))
