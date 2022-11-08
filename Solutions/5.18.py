@@ -26,5 +26,3 @@ if __name__ == "__main__":
 
     # Outputs the result:
     print(f"{pounds:.3f} lbs")
-
-    
