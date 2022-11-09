@@ -1,14 +1,16 @@
 # 4.17  Author: Adrian & June
 
-# The program promps for six leading coefficients.
+# The program prompts for six leading coefficients.
 # Afterwards, the program outputs the x and y values needed to solve the 
 # linear equation.
 
 # The function solves for the x and y values:
-def linear(coef) -> str:
+def linear(coef : list) -> str:
+    """The functions returns a string with the solutions to the equations."""
     # Sets the x and y values to non-existent:
     xvalue = None
     yvalue = None
+
     # Solves for y:
     for x in range(-10, 11):
         for y in range(-10, 11):
@@ -17,6 +19,7 @@ def linear(coef) -> str:
                 yvalue = int(y)
                 xvalue = int(x)
                 break
+
     # Solves for x:
     if ((xvalue * coef[0] + yvalue * coef[1]) == coef[2]):
         pass
@@ -24,6 +27,7 @@ def linear(coef) -> str:
         xvalue = int(((coef[2] - yvalue * coef[1]) / coef[0]))
     if ((xvalue * coef[0] + yvalue * coef[1]) != coef[2]):
         xvalue = None
+
     # If there is no solution for the linear equation the program 
     # outputs that it does not exist:
     if (xvalue == None) or (yvalue == None):
@@ -32,7 +36,7 @@ def linear(coef) -> str:
         result = f"x = {xvalue} , y = {yvalue}"
     return result
 
-# Promps and stores the coefficients:
+# Prompts and stores the coefficients:
 num_list = []
 for i in range(6):
     integer = int(input())
