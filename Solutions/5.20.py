@@ -4,7 +4,7 @@
 # steps taken.
 
 # The function:
-def feet_to_steeps(feet : float) -> int:
+def feet_to_steps(feet : float) -> int:
     """The function takes the an amount in foots and returns the number 
     of steps take."""
     steps = feet / 2.5
@@ -20,7 +20,7 @@ def reed() -> float:
 def main() -> None:
     """The function runs the program."""
     feet = reed()
-    steps = feet_to_steeps(feet)
+    steps = feet_to_steps(feet)
     print(steps)
     return None
 
