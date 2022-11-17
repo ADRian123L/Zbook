@@ -34,21 +34,22 @@ def int_to_reverse_binary(decimal : int) -> str:
 
 def string_reverse(string : str) -> str:
     """The function returns the reversed order of a string."""
+    # Reverses the order of the string:
     string = "".join((reversed(string)))
     return string
 
 def inputs() -> int:
     """The function prompts for an integer and returns it."""
+    # Prompts for an integer:
     integers = int(input())
     return integers
 
 def output(binary : str) -> None:
     """The function prints its argument."""
+    # Prints the argument:
     print(binary)
     return None
 
 if __name__ == "__main__":
     # Runs the program:
     main()
-
-  
