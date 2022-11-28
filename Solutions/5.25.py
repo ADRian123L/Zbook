@@ -12,7 +12,7 @@ def days_in_feb(year : int) -> float:
     """The function takes a year and determines wether it
     is leap year."""
     # Local variable:
-    is_leap = False
+    is_leap : bool = False
     # Checks if there are any arguments:
     try:
         year *= 1
@@ -25,10 +25,16 @@ def days_in_feb(year : int) -> float:
         else:
             is_leap = True
     # Sets how many days the year has:
-    days = (29 if (is_leap == True) else 28)
+    days : int = (29 if (is_leap == True) else 28)
     # Formats the output:
-    format = f"{year}{out[0]}{days}{out[1]}"
-    return print(format)    
+    format : str = f"{year}{out[0]}{days}{out[1]}"
+    return format
+
+def output(format : str) -> None:
+    """The function prints the answer."""
+    print(format)
+    return None
+
 
 def info() -> int:
     """The function prompts for a year and returns it."""
@@ -37,7 +43,8 @@ def info() -> int:
 
 def main(run=False) -> None:
     """The function drives the program."""
-    days_in_feb(None) # Calls the function:
+    format : str = days_in_feb(None) # Calls the function:
+    output(format)
     return None
 
 if __name__ == "__main__":
