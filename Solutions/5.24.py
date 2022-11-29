@@ -1,8 +1,7 @@
 # -*- coding: utf-8 -*-
-# 10.11.py  Author: Adrian
+# 5.24.py  Author: Adrian
 
-# The program prompts for a year and returns wether it is
-# a leap year or not.
+# The program prompts for a jiffy and returns it in seconds.
 
 def jiffies_to_seconds(jiffy : float) -> float:
     """The functions takes a number in jiffy and returns 
