@@ -52,4 +52,4 @@ def calculate(number : float) -> float:
     return levels
 
 if __name__ == "__main__":
-    main()
+    main(run=True)
